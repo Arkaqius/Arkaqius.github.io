@@ -20,7 +20,7 @@ author: Arek Kuleta
 ###############################################
 
 navbar-links:
-  About Me: "aboutme_copy"
+  About Me: "pages/aboutme"
 
 ################
 # --- Logo --- #
