@@ -21,8 +21,10 @@ author: Arek Kuleta
 
 navbar-links:
   About Me: "pages/aboutme"
-    About Me2: "pages/aboutme"
-  About Me3: "pages/aboutme"
+  Resources:
+    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - Learn markdown: "http://www.markdowntutorial.com/"
+    - GitHub Pages: "https://pages.github.com/"
 
 ################
 # --- Logo --- #
