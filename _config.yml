@@ -20,11 +20,14 @@ author: Arek Kuleta
 ###############################################
 
 navbar-links:
-  About Me: "pages/aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
+  ABOUT ME: "pages/aboutme"
+  VOICE HAC:
+    - VoiceHac repo: "https://github.com/Arkaqius/VoiceHAC"
+    - RoadMap: "_post/2023-06-22-voicehac_roadmap"
+    - Architecture: "_post/2023-06-22-voicehac_architecture"
+  HA SAFETY COMPONENT:
+    - Safety Component repo: "https://github.com/Arkaqius/SafetyComponent/tree/feature/SafetyConcept"
+    - Introduction: "_post/2023-06-22-hasc_intro.md"
 
 ################
 # --- Logo --- #
