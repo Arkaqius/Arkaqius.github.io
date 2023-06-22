@@ -105,17 +105,17 @@ keywords: "home assistant, voice assistant, functional safety, safety, home auto
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#293739"
-navbar-text-col: "#FFFFFF"
-navbar-border-col: "#1F2C2F"
-page-col: "#2E3C3F"
-text-col: "#FFFFFF"
+navbar-col: "#EAF5ED"
+navbar-text-col: "#335C36"
+navbar-border-col: "#C8E6CD"
+page-col: "#FFFFFF"
+text-col: "#404040"
 link-col: "#00BFA5"
-hover-col: "#00A28E"
-footer-col: "#293739"
-footer-text-col: "#CCCCCC"
-footer-link-col: "#FFFFFF"
-footer-hover-col: "#00A28E"
+hover-col: "#009B8C"
+footer-col: "#EAF5ED"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#009B8C"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
