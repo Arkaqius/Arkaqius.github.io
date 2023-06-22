@@ -21,6 +21,8 @@ author: Arek Kuleta
 
 navbar-links:
   About Me: "pages/aboutme"
+    About Me2: "pages/aboutme"
+  About Me3: "pages/aboutme"
 
 ################
 # --- Logo --- #
