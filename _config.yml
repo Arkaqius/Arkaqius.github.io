@@ -27,7 +27,7 @@ navbar-links:
     - Architecture: "2023-06-22-voicehac_architecture"
   HA SAFETY COMPONENT:
     - Safety Component repo: "https://github.com/Arkaqius/SafetyComponent/tree/feature/SafetyConcept"
-    - Introduction: "_2023-06-22-hasc_intro.md"
+    - Introduction: "2023-06-22-hasc_intro.md"
 
 ################
 # --- Logo --- #
