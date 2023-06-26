@@ -28,6 +28,10 @@ navbar-links:
   HA SAFETY COMPONENT:
     - Safety Component repo: "https://github.com/Arkaqius/SafetyComponent/tree/feature/SafetyConcept"
     - Introduction: "2023-06-22-hasc_intro"
+    - Safety Concept - Risks assessments: "2023-06-24-HARA_part _1"
+    - Safety Concept - Safety Goals: "2023-06-25-HARA_part _2"
+    - System requirements - System architecture : "22023-06-26-SYS_part_1"
+    - System requirements - Components: "2023-06-27-SYS_part_2"
 
 ################
 # --- Logo --- #
