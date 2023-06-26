@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VoiceHac architecture
+title: VoiceHac roadmap
 gh-repo: Arkaqius/VoiceHAC
 gh-badge: [star, fork, follow]
 tags: [home_automation,voice_assistant,home_assistant,NER,neural_networks]
