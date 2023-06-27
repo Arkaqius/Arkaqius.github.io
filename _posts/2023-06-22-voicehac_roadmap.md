@@ -2,9 +2,10 @@
 layout: post
 title: VoiceHac roadmap
 gh-repo: Arkaqius/VoiceHAC
-gh-badge: [star, fork, follow]
-tags: [home_automation,voice_assistant,home_assistant,NER,neural_networks]
+gh-badge: [star, watch, fork, follow]
+tags: [home_automation, voice_assistant, home_assistant, NER, neural_networks, Mycroft, nltk, NLP, PyTorch, OpenAI, GPT]
 comments: true
+readtime: true
 ---
 
 Welcome to the project roadmap for VoiceHAC! In this blog, I'll be documenting my journey as I work on an ambitious project that involves integrating Mycroft, an open-source voice assistant, with Natural Language Processing (NLP) capabilities using the nltk library, as well as harnessing the power of GPT-2 and GPT-4 models from PyTorch and OpenAI, respectively. The ultimate goal is to create an intelligent and context-aware voice assistant that can interact with my Home Assistant setup and provide seamless control over my smart home devices.

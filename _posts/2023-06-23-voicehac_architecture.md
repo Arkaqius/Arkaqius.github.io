@@ -2,9 +2,10 @@
 layout: post
 title: VoiceHac architecture
 gh-repo: Arkaqius/VoiceHAC
-gh-badge: [star, fork, follow]
-tags: [home_automation,voice_assistant,home_assistant,NER,neural_networks]
+gh-badge: [star, watch, fork, follow]
+tags: [home_automation, voice_assistant, home_assistant, NER, neural_networks, Mycroft, NLP, intent_recognition, entity_extraction, GPT, design, implementation, software_architecture, system_architecture]
 comments: true
+readtime: true
 ---
 
 Welcome to the high-level architecture overview for the conversational AI system I'm developing to control Home Assistant. In this post, I'll outline the main components that make up the system and provide a brief description of their roles. Please note that designing the architecture is an iterative process, and I anticipate updating it as the project evolves. This overview will focus on the broader architecture without delving into the specific interfaces.   

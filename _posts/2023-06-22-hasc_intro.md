@@ -2,9 +2,10 @@
 layout: post
 title: HA Safety component introduction
 gh-repo: Arkaqius/SafetyComponent
-gh-badge: [star, fork, follow]
-tags: [home_automation,safety,home_assistant]
+gh-badge: [star, watch, fork, follow]
+tags: [home_automation, safety, home_assistant, ISO_26262, hazard_and_risk_analysis, system_requirements, system_architecture, software_architecture, software_testing, system_testing, cybersecurity, continual_improvement]
 comments: true
+readtime: true
 ---
 
 **Welcome back, readers of Arek’s Dev Diary!**
