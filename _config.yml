@@ -23,8 +23,8 @@ navbar-links:
   ABOUT ME: "pages/aboutme"
   VOICE HAC:
     - VoiceHac repo: "https://github.com/Arkaqius/VoiceHAC"
-    - RoadMap: "2023-06-22-voicehac_roadmap"
-    - Architecture: "2023-06-22-voicehac_architecture"
+    - RoadMap: "2023-06-22-voicehac_roadmaps"
+    - Architecture: "2023-06-23-voicehac_architecture"
   HA SAFETY COMPONENT:
     - Safety Component repo: "https://github.com/Arkaqius/SafetyComponent/tree/feature/SafetyConcept"
     - Introduction: "2023-06-22-hasc_intro"
