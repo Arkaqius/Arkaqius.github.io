@@ -12,53 +12,59 @@ Welcome to the project roadmap for VoiceHAC! In this blog, I'll be documenting m
 
 The roadmap below outlines the various steps and milestones involved in this project. As I make progress, I'll be sharing updates, challenges, and lessons learned through blog posts. Stay tuned to follow along and learn from my experiences as I embark on this exciting journey!
 
-## Mycroft:  
+## Software Architecture
 
-- [x] Implement a general fallback skill in Mycroft to process all requests. Customize it further as needed.  
-- [ ] Develop a Home Assistant API helper with functions for getting/setting entities, running services, and controlling Home Assistant itself.  
-    *Will use existing library*  
+- [ ] Define a detailed Software Architecture for the project, including general software architecture considerations and Python-specific ones.
+    - [ ] Define high-level system overview, architectural styles or patterns, and non-functional requirements.
+    - [ ] Create component and deployment diagrams.
+    - [ ] Outline data models and database design, security architecture, and interfaces.
+    - [ ] Detail error handling and logging, and maintenance and scalability plans.
+    - [ ] Organize Python code into modules and packages for reusability and maintainability.
+    - [ ] Define objects and data structures, use of libraries and frameworks, and data flow.
+    - [ ] Document concurrency and parallelism models used, and testing and error handling strategies.
+    - [ ] Document integration with other systems, environment and dependencies, and deployment and distribution strategies.
 
-## NLP (using nltk library):  
+## Mycroft Voice Assistant
 
-- [x] Install the nltk library and download necessary data sets.  
-- [x] Implement Intent Recognition:  
-    - [x] Create a training dataset with sample sentences and corresponding intents.  
-    - [x] Train a classifier (e.g., Naive Bayes, Decision Trees, or SVM) using the dataset.  
-    - [x] Write a function to predict intents using the trained classifier.  
-    - [x] Implement Entity Extraction:  
-        - [x] Tokenize sentences.  
-        - [x] Perform part-of-speech tagging and named entity recognition using nltk functions.  
-        - [x] Write a function to extract relevant entities from user queries.  
+- [x] Implement a general fallback skill in Mycroft to process all requests. Customize it further as needed.
+- [ ] Configure and integrate Mycroft's ability to handle key tasks like STT, TTS, wake word detection, and managing audio hardware.
 
-## Context Manager:  
+## Home Assistant
 
-- [ ] Design a data structure to store conversation history.  
-- [ ] Implement functions for adding new interactions and retrieving context information.  
-- [ ] Implement logic for handling follow-up questions and providing context-aware responses.  
+- [x] Configure Home Assistant to interact with various home automation devices.
+- [x] Set up Home Assistant as the centralized data server.
 
-## PyTorch GPT-2 Model:  
+## NLP Component
 
-- [ ] Install the required PyTorch library.  
-- [ ] Obtain a pre-trained GPT-2 model or train your own from scratch using a dataset.  
-- [ ] Fine-tune the GPT-2 model on Home Assistant-specific tasks using a custom dataset.  
-- [ ] Implement functions for processing queries, generating responses or API calls, and interacting with the Context Manager.  
+- [x] Implement NER microservice for identifying and categorizing entities in the user's speech.
+- [ ] Develop HADirect, dividing it into multiple modules each handling specific types of entities like doors, lights, windows, heating, locks, etc.
+- [ ] Set up local GPT-2.0 AI for processing complex or Home Assistant specific queries.
+- [ ] Implement cloud-based GPT-4.0 AI for handling general knowledge queries.
+- [ ] Create a To-Do Handling microservice for managing to-do lists and related requests.
+- [ ] Develop a Grocery List microservice for handling grocery list-related requests.
+- [ ] Set up a Media Player microservice for processing all media playing requests.
 
-## OpenAI GPT-4 Model:  
+## Context Manager
 
-- [ ] Sign up for an OpenAI API key.  
-- [ ] Install the required OpenAI library.  
-- [ ] Implement an OpenAI API wrapper in Python, including functions for:  
-- [ ] Sending user queries to the GPT-4 model.  
-- [ ] Receiving generated responses.  
-- [ ] Interacting with the Context Manager to maintain conversation context.  
-- [ ] Integration:
+- [ ] Design a data structure to store conversation history.
+- [ ] Implement functions for adding new interactions and retrieving context information.
+- [ ] Implement logic for handling follow-up questions and providing context-aware responses.
 
-## Connect Mycroft to the NLP component.
-- [ ] Integrate the NLP component with the Context Manager.  
-- [ ] Implement logic to route queries to the appropriate GPT model based on context and intent.  
-- [ ] Integrate the Home Assistant API helper with the NLP component and GPT models to perform requested actions.  
-- [ ] Testing and Debugging:  
+## Orchestrator
 
-## Test the system with various user queries and scenarios.  
-- [ ] Debug and fix any issues that arise during testing.  
-- [ ] Optimize the system's performance based on test results.  
+- [ ] Design and implement the Orchestrator to manage the different microservices.
+    - [ ] Implement routing logic to forward requests to the appropriate service.
+    - [ ] Ensure proper communication between the services.
+
+## Integration
+
+- [ ] Connect Mycroft to the NLP component.
+- [ ] Integrate the NLP component with the Home Assistant.
+- [ ] Implement logic to route queries to the appropriate AI model (GPT-2.0 or GPT-4.0) based on context and intent.
+- [ ] Integrate the Context Manager with the NLP component, GPT models, and Mycroft.
+
+## Testing and Debugging
+
+- [ ] Test the system with various user queries and scenarios.
+- [ ] Debug and fix any issues that arise during testing.
+- [ ] Optimize the system's performance based on test results.

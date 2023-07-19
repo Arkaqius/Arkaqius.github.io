@@ -12,25 +12,35 @@ Welcome to the high-level architecture overview for the conversational AI system
 
 Stay tuned for updates on the architecture and the project's progress as I continue to refine the design and implementation. By sharing this journey, I hope to inspire and inform fellow developers and enthusiasts interested in building similar AI-driven solutions.  
 
-
 #### **Mycroft**: 
-This is a voice assistant that records user speech and converts it to text using a speech-to-text engine. It then passes the text to the natural language processing (NLP) component.
-
-#### **NLP Component**:
-This component is responsible for identifying relevant entities and intents in the user's query. The NLP component has been enhanced with the following sub-components:
-
-- Intent Recognition: This module identifies the user's intent, ensuring that appropriate actions or responses are generated. Tools like Rasa NLU or OpenAI's Intent Recognition API can be used for this purpose.
-- Entity Extraction: This module uses techniques like named entity recognition, part-of-speech tagging, and fuzzy logic to process the user's query.
-If the query can be answered using the Home Assistant API, the NLP component generates an API call and sends it to Home Assistant. If the query cannot be answered using the Home Assistant API, the NLP component sends the query to the 
-
-#### **Context Manager:**
- This is an independent component responsible for maintaining conversational context. It interacts with the NLP Component, PyTorch GPT-2 Model, and OpenAI GPT-4 Model to handle follow-up questions and provide more relevant responses based on previous interactions.
-
-#### **PyTorch GPT-2 Model (Home Assistant Specific):**
- This is a private GPT-2 model that is trained and fine-tuned specifically for the Home Assistant control task. If the query is related to Home Assistant, the NLP component sends the query to this model for processing. It generates a natural language response or API call for Home Assistant, which is sent back to the NLP component.
-
-####  **OpenAI GPT-4 Model (General Conversation):** 
-This is a pre-trained GPT model provided by OpenAI. If the user's query is not related to Home Assistant, the NLP component sends the query to the GPT-4 model for processing. The response from GPT-4 is sent back to the system and converted to speech using a text-to-speech engine, before being played back to the user via Mycroft.
+Mycroft can be seen as a microservice responsible for several key tasks, such as speech-to-text (STT), text-to-speech (TTS), wake word detection, and handling audio hardware interactions.
 
 ####  **Home Assistant:** 
-This is a home automation system that exposes an API to control it. The NLP component generates API calls to Home Assistant based on the responses from the PyTorch GPT-2 model to perform the requested action.
+Home Assistant operates as a microservice that functions as the actuator, interacting with and controlling various home automation devices. It also serves as the centralized data server, storing and providing access to a variety of information like temperature data, to-do lists, etc.
+
+#### **NLP Component**:
+The text processing module can be split into multiple microservices, each focused on a specific skill or feature:
+
+- Named Entity Recognition (NER): Responsible for identifying and categorizing entities in the user's speech.
+
+- Home Assistant Direct (HADirect): This microservice is further divided into modules, each handling a specific type of entity (doors, lights, windows, heating, locks, etc.). Each module would be independently responsible for processing requests related to its assigned entity.
+
+- GPT-2.0 Local AI: Used for processing more complex or Home Assistant specific queries that require a deeper level of understanding.
+
+- GPT-4.0 Cloud-based AI: Used for processing general knowledge queries that fall outside the scope of Home Assistant.
+
+- To-Do Handling Feature: This would be responsible for managing to-do lists and related requests.
+
+- Grocery List Feature: Handles requests related to the grocery list.
+
+- Media Player Feature: Handles all the media playing requests.
+
+#### **Orchestrator:**
+The Orchestrator is a crucial component in a microservices architecture. It is responsible for managing the different services, ensuring that they function together seamlessly. It routes requests to the appropriate service and ensures proper communication between services.
+
+This Microservices Architecture will allow each component to be developed, deployed, and scaled independently. This can lead to a more robust system and quicker iteration times as changes can be made to individual services without affecting the entire system.
+
+However, it's worth noting that a Microservices Architecture also introduces its own set of complexities, including increased difficulty in managing and coordinating services, network latency, and data consistency. These challenges should be considered and addressed in your architectural planning and design process.
+
+#### **Context Manager:**
+This is an independent component responsible for maintaining conversational context. It interacts with the NLP Component, PyTorch GPT-2 Model, and OpenAI GPT-4 Model to handle follow-up questions and provide more relevant responses based on previous interactions.
